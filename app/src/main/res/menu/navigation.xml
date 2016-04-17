@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- http://android-developers.blogspot.nl/2015/05/android-design-support-library.html //-->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_item_news"
+            android:icon="@drawable/ic_message_24dp"
+            android:title="@string/title_section_news" />
+        <item
+            android:id="@+id/navigation_item_schedule"
+            android:icon="@drawable/ic_event_24dp"
+            android:title="@string/title_section_schedule" />
+        <item
+            android:id="@+id/navigation_item_browse"
+            android:icon="@drawable/ic_dashboard_24dp"
+            android:title="@string/title_section_browse" />
+        <item
+            android:id="@+id/navigation_item_map"
+            android:icon="@drawable/ic_map_24dp"
+            android:title="@string/title_section_map" />
+        <item
+            android:id="@+id/navigation_item_qrhunt"
+            android:icon="@drawable/ic_qrcode_scan"
+            android:title="@string/title_section_qr_hunt" />
+        <item
+            android:id="@+id/navigation_item_login"
+            android:icon="@drawable/ic_account_circle_24dp"
+            android:title="@string/title_section_login" />
+        <item
+            android:id="@+id/navigation_item_about"
+            android:icon="@drawable/ic_info_outline_24dp"
+            android:title="@string/title_section_about" />
+    </group>
+</menu>

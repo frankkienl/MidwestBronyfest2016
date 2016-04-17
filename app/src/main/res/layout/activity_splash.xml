@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/splashscreen_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/hwcon2016_banner"
+        android:adjustViewBounds="true"
+        android:id="@+id/splash_header"
+        />
+
+
+    <TextView
+        android:id="@+id/splash_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textSize="46sp"
+        android:textColor="#454545"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:text="HWcon 2016" />
+
+    <ImageView
+        android:id="@+id/splash_logo"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:layout_above="@id/splash_title"
+        android:layout_below="@id/splash_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:maxWidth="200dp"
+        android:maxHeight="200dp"
+        android:src="@drawable/ic_launcher_hwcon2016_2_web" />
+
+</RelativeLayout>
