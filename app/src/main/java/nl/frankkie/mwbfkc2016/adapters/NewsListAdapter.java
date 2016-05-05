@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 import com.koushikdutta.ion.Ion;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.fragments.NewsFragment;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.fragments.NewsFragment;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * Created by FrankkieNL on 1-1-2016.

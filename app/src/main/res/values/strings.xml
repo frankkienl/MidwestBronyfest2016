@@ -36,7 +36,7 @@
         Specific for this convention
         Change these when using for another convention
     -->
-    <string name="app_name">HWcon 2016</string>
+    <string name="app_name">Midwest Bronyfest 2016</string>
     <string name="about_description">A My little Pony Convention in the Netherlands for all generations!</string>
     <string name="about_location_details">Event Center Fokker, IJweg 1094, 2133 MN Hoofddorp, The Netherlands</string>
     <string name="about_mail_details">info@hwcon.nl</string>

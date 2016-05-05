@@ -27,10 +27,10 @@ import com.google.android.gms.plus.Plus;
 
 import org.acra.ACRA;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.adapters.NewsListAdapter;
-import nl.frankkie.hwcon2016.data.EventContract;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.adapters.NewsListAdapter;
+import nl.frankkie.mwbfkc2016.data.EventContract;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * Created by FrankkieNL on 1-1-2016.
@@ -127,7 +127,7 @@ public class NewsFragment extends ListFragment implements LoaderManager.LoaderCa
 
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-        Uri uri = Uri.parse("content://nl.frankkie.hwcon2016/news/");
+        Uri uri = Uri.parse("content://nl.frankkie.mwbfkc2016/news/");
         CursorLoader cl = new CursorLoader(getActivity(), uri, NEWS_COLUMNS, null, null, "_id DESC");
         return cl;
     }

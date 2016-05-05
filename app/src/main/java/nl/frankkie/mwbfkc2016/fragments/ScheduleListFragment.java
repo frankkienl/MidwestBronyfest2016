@@ -18,10 +18,10 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListView;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.adapters.ScheduleListAdapter;
-import nl.frankkie.hwcon2016.data.EventContract;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.adapters.ScheduleListAdapter;
+import nl.frankkie.mwbfkc2016.data.EventContract;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * A list fragment representing a list of Events. This fragment
@@ -75,7 +75,7 @@ public class ScheduleListFragment extends ListFragment implements LoaderManager.
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         //Uri uri = Uri.parse(EventContract.EventEntry.CONTENT_URI);
-        Uri uri = Uri.parse("content://nl.frankkie.hwcon2016/favorites/event");
+        Uri uri = Uri.parse("content://nl.frankkie.mwbfkc2016/favorites/event");
         String sortOrder = EventContract.EventEntry.COLUMN_NAME_START_TIME + " ASC";
         CursorLoader cl = new CursorLoader(getActivity(), uri, SCHEDULE_COLUMNS, null, null, sortOrder);
         return cl;

@@ -24,11 +24,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.data.EventContract;
-import nl.frankkie.hwcon2016.util.GcmUtil;
-import nl.frankkie.hwcon2016.util.GoogleApiUtil;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.data.EventContract;
+import nl.frankkie.mwbfkc2016.util.GcmUtil;
+import nl.frankkie.mwbfkc2016.util.GoogleApiUtil;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * Created by FrankkieNL on 6-12-2014.
@@ -57,7 +57,7 @@ public class ConventionSyncAdapter extends AbstractThreadedSyncAdapter {
         if ((syncFlags & Util.SYNCFLAG_CONVENTION_DATA) == Util.SYNCFLAG_CONVENTION_DATA) {
             String regId = GcmUtil.gcmGetRegId(getContext());
             //CHANGE THIS URL WHEN USING FOR OTHER CONVENTION
-            String json = Util.httpDownload("https://wofje.8s.nl/hwcon2016/api/v1/downloadconventiondata.php?regId=" + regId + "&username=" + GoogleApiUtil.getUserEmail(getContext()));
+            String json = Util.httpDownload("https://wofje.8s.nl/mwbfkc2016/api/v1/downloadconventiondata.php?regId=" + regId + "&username=" + GoogleApiUtil.getUserEmail(getContext()));
             if (json != null) {
                 parseConventionDataJSON(json);
             }
@@ -65,7 +65,7 @@ public class ConventionSyncAdapter extends AbstractThreadedSyncAdapter {
         if ((syncFlags & Util.SYNCFLAG_DOWNLOAD_FAVORITES) == Util.SYNCFLAG_DOWNLOAD_FAVORITES) {
             String regId = GcmUtil.gcmGetRegId(getContext());
             //With username "&username=", for syncing between devices of same user
-            String json = Util.httpDownload("https://wofje.8s.nl/hwcon2016/api/v1/downloadfavorites.php?regId=" + regId + "&username=" + GoogleApiUtil.getUserEmail(getContext()));
+            String json = Util.httpDownload("https://wofje.8s.nl/mwbfkc2016/api/v1/downloadfavorites.php?regId=" + regId + "&username=" + GoogleApiUtil.getUserEmail(getContext()));
             if (json != null) {
                 parseFavoritesDataJson(json);
             }
@@ -96,10 +96,10 @@ public class ConventionSyncAdapter extends AbstractThreadedSyncAdapter {
                     String json = wrapper.toString();
                     String postData = "json=" + json;
                     ////////////////////////////
-                    String response = Util.httpPost(getContext(), "https://wofje.8s.nl/hwcon2016/api/v1/uploadfavorites.php", postData);
+                    String response = Util.httpPost(getContext(), "https://wofje.8s.nl/mwbfkc2016/api/v1/uploadfavorites.php", postData);
                     if (!"ok".equals(response.trim())) {
                         //There muse be something wrong
-                        Util.sendACRAReport("Server did not send 'ok', Favorites", "https://wofje.8s.nl/hwcon2016/api/v1/uploadfavorites.php", postData + "\n" + response);
+                        Util.sendACRAReport("Server did not send 'ok', Favorites", "https://wofje.8s.nl/mwbfkc2016/api/v1/uploadfavorites.php", postData + "\n" + response);
                     }
                 }
                 /////////////////////////////
@@ -142,10 +142,10 @@ public class ConventionSyncAdapter extends AbstractThreadedSyncAdapter {
                     String json = wrapper.toString();
                     String postData = "json=" + json;
                     ////////////////////////////
-                    String response = Util.httpPost(getContext(), "https://wofje.8s.nl/hwcon2016/api/v1/uploadqrfound.php", postData);
+                    String response = Util.httpPost(getContext(), "https://wofje.8s.nl/mwbfkc2016/api/v1/uploadqrfound.php", postData);
                     if (!"ok".equals(response.trim())) {
                         //There muse be something wrong
-                        Util.sendACRAReport("Server did not send 'ok', QRs", "https://wofje.8s.nl/hwcon2016/api/v1/uploadqrfound.php", postData + "\n" + response);
+                        Util.sendACRAReport("Server did not send 'ok', QRs", "https://wofje.8s.nl/mwbfkc2016/api/v1/uploadqrfound.php", postData + "\n" + response);
                     }
                 }
             } catch (Exception e) {
@@ -156,7 +156,7 @@ public class ConventionSyncAdapter extends AbstractThreadedSyncAdapter {
         ////
         if ((syncFlags & Util.SYNCFLAG_DOWNLOAD_QRFOUND) == Util.SYNCFLAG_DOWNLOAD_QRFOUND) {
             String regId = GcmUtil.gcmGetRegId(getContext());
-            String json = Util.httpDownload("https://wofje.8s.nl/hwcon2016/api/v1/downloadqrfound.php?regId=" + regId + "&username=" + GoogleApiUtil.getUserEmail(getContext()));
+            String json = Util.httpDownload("https://wofje.8s.nl/mwbfkc2016/api/v1/downloadqrfound.php?regId=" + regId + "&username=" + GoogleApiUtil.getUserEmail(getContext()));
             if (json != null) {
                 parseQrFoundDataJson(json);
             }

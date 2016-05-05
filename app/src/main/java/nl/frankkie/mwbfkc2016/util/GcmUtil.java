@@ -23,8 +23,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Locale;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.RegistrationIntentService;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.RegistrationIntentService;
 
 /**
  * Created by FrankkieNL on 20-12-2014.
@@ -97,8 +97,8 @@ public class GcmUtil {
         int appVersion = pInfo.versionCode;
         String postData = "regId=" + regId + "&androidVersion=" + Build.VERSION.RELEASE + "&androidVersionInt=" + Build.VERSION.SDK_INT + "&brand=" + Build.BRAND + "&model=" + Build.MODEL + "&locale=" + locale + "&appVersion=" + appVersion;
         try {
-            //For rant, see nl.frankkie.hwcon2016.util.Util
-            URL url = new URL("https://wofje.8s.nl/hwcon2016/api/v1/gcmregister.php");
+            //For rant, see nl.frankkie.mwbfkc2016.util.Util
+            URL url = new URL("https://wofje.8s.nl/mwbfkc2016/api/v1/gcmregister.php");
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("POST");
             //http://stackoverflow.com/questions/4205980/java-sending-http-parameters-via-post-method-easily

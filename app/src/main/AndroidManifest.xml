@@ -1,12 +1,142 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="nl.frankkie.mwbfkc2016">
 
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_hwcon2016_1"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".activities.Splash4Activity"
+            android:enabled="true"
+            android:finishOnTaskLaunch="true"
+            android:icon="@mipmap/ic_launcher_hwcon2016_4"
+            android:label="@string/app_name"
+            android:theme="@style/splashscreen_background_light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.EventListActivity"
+            android:label="@string/app_name"></activity>
+
+        <activity
+            android:name=".activities.EventDetailActivity"
+            android:label="@string/title_event_detail"
+            android:parentActivityName=".activities.EventListActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.EventListActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.AboutActivity"
+            android:label="@string/title_activity_about"></activity>
+        <activity
+            android:name=".activities.AboutAppActivity"
+            android:label="@string/title_activity_about_app"
+            android:parentActivityName=".activities.AboutAppActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AboutActivity" />
+        </activity>
+        <activity
+            android:name=".activities.AboutVenueLocationActivity"
+            android:label="@string/about_venue_location"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.AboutActivity" />
+        </activity>
+        <activity android:name=".activities.EasterEggActivity"></activity>
+        <!--
+        Don't reload WebView onConfigChange.
+        http://developer.android.com/reference/android/webkit/WebView.html
+        http://developer.android.com/guide/topics/resources/runtime-changes.html
+        //-->
+        <activity
+            android:name=".activities.MapActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_map"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".activities.ScheduleActivity"
+            android:label="@string/title_activity_schedule"></activity>
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/title_section_login"></activity>
+        <activity
+            android:name=".activities.QrHuntActivity"
+            android:label="@string/title_section_qr_hunt">
+            <!-- hwcon://qr?key=val
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <data android:scheme="hwcon" android:host="qr" />
+                </intent-filter>
+            //-->
+        </activity>
+        <activity
+            android:name=".activities.NewsActivity"
+            android:label="@string/title_section_news" />
+
+        <provider
+            android:name="nl.frankkie.mwbfkc2016.data.EventProvider"
+            android:authorities="nl.frankkie.mwbfkc2016"
+            android:exported="false"
+            android:syncable="true" />
+
+        <!-- SyncAdapter //-->
+        <service
+            android:name=".sync.ConventionAuthenticatorService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <!-- Runs in :sync-process to reduce overhead. See docs.
+        android:process=":sync" in service-tag
+        //-->
+        <service
+            android:name=".sync.ConventionSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+
+        <!-- Map Download Service //-->
+        <service android:name=".util.MapDownloadIntentService" android:exported="false"/>
+
 
     </application>
 

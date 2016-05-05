@@ -17,10 +17,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.adapters.EventAdapter;
-import nl.frankkie.hwcon2016.data.EventContract;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.adapters.EventAdapter;
+import nl.frankkie.mwbfkc2016.data.EventContract;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * A list fragment representing a list of Events. This fragment

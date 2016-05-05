@@ -30,14 +30,14 @@ import android.widget.TextView;
 import com.google.android.gms.games.Games;
 import com.koushikdutta.ion.Ion;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.activities.EventDetailActivity;
-import nl.frankkie.hwcon2016.activities.EventListActivity;
-import nl.frankkie.hwcon2016.activities.ScheduleActivity;
-import nl.frankkie.hwcon2016.data.EventContract;
-import nl.frankkie.hwcon2016.util.GoogleApiUtil;
-import nl.frankkie.hwcon2016.util.MyLinkMovementMethod;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.activities.EventDetailActivity;
+import nl.frankkie.mwbfkc2016.activities.EventListActivity;
+import nl.frankkie.mwbfkc2016.activities.ScheduleActivity;
+import nl.frankkie.mwbfkc2016.data.EventContract;
+import nl.frankkie.mwbfkc2016.util.GoogleApiUtil;
+import nl.frankkie.mwbfkc2016.util.MyLinkMovementMethod;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * A fragment representing a single Event detail screen.

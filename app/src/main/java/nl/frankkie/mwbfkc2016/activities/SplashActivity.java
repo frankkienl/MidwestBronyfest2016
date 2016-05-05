@@ -20,9 +20,9 @@ import com.google.android.gms.plus.Plus;
 
 import org.acra.ACRA;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.RegistrationIntentService;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.RegistrationIntentService;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * http://developer.android.com/guide/components/tasks-and-back-stack.html#Clearing

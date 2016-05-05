@@ -24,9 +24,9 @@ import android.widget.Toast;
 
 import java.io.File;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.util.MapDownloadIntentService;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.util.MapDownloadIntentService;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 
 public class MapActivity extends AppCompatActivity {
@@ -116,7 +116,7 @@ public class MapActivity extends AppCompatActivity {
 
         LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(this);
         myLocalBroadcastReceiver = new MyLocalBroadcastReceiver();
-        IntentFilter intentFilter = new IntentFilter("hwcon2016_map");
+        IntentFilter intentFilter = new IntentFilter("mwbfkc2016_map");
         localBroadcastManager.registerReceiver(myLocalBroadcastReceiver, intentFilter);
 
         checkMapDownloaded();
@@ -187,7 +187,7 @@ public class MapActivity extends AppCompatActivity {
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            Log.v("HWcon2016","Map update done (received broadcast)");
+            Log.v("mwbfkc2016","Map update done (received broadcast)");
             checkMapDownloaded();
         }
     }

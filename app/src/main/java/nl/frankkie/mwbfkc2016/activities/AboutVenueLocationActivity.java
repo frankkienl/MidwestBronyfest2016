@@ -16,8 +16,8 @@ import android.widget.Toast;
 
 import java.lang.ref.WeakReference;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * Created by fbouwens on 14-1-2016.

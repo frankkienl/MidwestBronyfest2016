@@ -1,6 +1,6 @@
 package nl.frankkie.mwbfkc2016.activities;
 
-import nl.frankkie.hwcon2016.R;
+import nl.frankkie.mwbfkc2016.R;
 
 /**
  * Created by FrankkieNL on 1/31/2016.
