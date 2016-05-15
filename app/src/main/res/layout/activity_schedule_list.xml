@@ -32,7 +32,7 @@
             <fragment xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/schedule_list"
-                android:name="nl.frankkie.hwcon2016.fragments.ScheduleListFragment"
+                android:name="nl.frankkie.mwbfkc2016.fragments.ScheduleListFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:context=".ScheduleListActivity"

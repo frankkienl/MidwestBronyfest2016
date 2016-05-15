@@ -49,7 +49,7 @@
 
                 <fragment
                     android:id="@+id/event_list"
-                    android:name="nl.frankkie.hwcon2016.fragments.EventListFragment"
+                    android:name="nl.frankkie.mwbfkc2016.fragments.EventListFragment"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

@@ -3,6 +3,7 @@ package nl.frankkie.mwbfkc2016.adapters;
 import android.content.Context;
 import android.database.Cursor;
 import android.support.v4.widget.CursorAdapter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +19,14 @@ import nl.frankkie.mwbfkc2016.util.Util;
  */
 public class EventAdapter extends CursorAdapter {
 
-
-
     public EventAdapter(Context context, Cursor cursor, int flags) {
         super(context, cursor, flags);
+    }
+
+    @Override
+    public Cursor swapCursor(Cursor newCursor) {
+        Log.v("Convention", "EventAdapter.swapCursor");
+        return super.swapCursor(newCursor);
     }
 
     @Override
