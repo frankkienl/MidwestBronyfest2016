@@ -42,15 +42,15 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.activities.AboutActivity;
-import nl.frankkie.hwcon2016.activities.EventListActivity;
-import nl.frankkie.hwcon2016.activities.LoginActivity;
-import nl.frankkie.hwcon2016.activities.MapActivity;
-import nl.frankkie.hwcon2016.activities.NewsActivity;
-import nl.frankkie.hwcon2016.activities.QrHuntActivity;
-import nl.frankkie.hwcon2016.activities.ScheduleActivity;
-import nl.frankkie.hwcon2016.fragments.AppIconDialogFragment;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.activities.AboutActivity;
+import nl.frankkie.mwbfkc2016.activities.EventListActivity;
+import nl.frankkie.mwbfkc2016.activities.LoginActivity;
+import nl.frankkie.mwbfkc2016.activities.MapActivity;
+import nl.frankkie.mwbfkc2016.activities.NewsActivity;
+import nl.frankkie.mwbfkc2016.activities.QrHuntActivity;
+import nl.frankkie.mwbfkc2016.activities.ScheduleActivity;
+import nl.frankkie.mwbfkc2016.fragments.AppIconDialogFragment;
 
 /**
  * Created by fbouwens on 10-12-14.
@@ -118,7 +118,7 @@ public class Util {
 
     public static Account createDummyAccount(Context context) {
         //TODO: Change domain when using for a different convention
-        Account account = new Account("dummyaccount", "nl.frankkie.hwcon2016");
+        Account account = new Account("dummyaccount", "nl.frankkie.mwbfkc2016");
         AccountManager accountManager = (AccountManager) context.getSystemService(Context.ACCOUNT_SERVICE);
         boolean success = accountManager.addAccountExplicitly(account, null, null);
         if (!success) {
@@ -142,7 +142,7 @@ public class Util {
         syncBundle.putInt("syncflags", syncWhatFlags);
         syncBundle.putBoolean(ContentResolver.SYNC_EXTRAS_MANUAL, true);
         syncBundle.putBoolean(ContentResolver.SYNC_EXTRAS_EXPEDITED, true); //as in: run NOW.
-        ContentResolver.requestSync(acc, "nl.frankkie.hwcon2016", syncBundle);
+        ContentResolver.requestSync(acc, "nl.frankkie.mwbfkc2016", syncBundle);
     }
 
     public static void syncConventionData(Context context) {
@@ -169,7 +169,7 @@ public class Util {
         builder.setVibrate(new long[]{50, 250, 50, 250}); //delay,vibrate,delay,etc.
         //http://stackoverflow.com/questions/8801122/set-notification-sound-from-assets-folder
         //The docs are not clear about how to add sound, StackOverflow to the rescue!
-        builder.setSound(Uri.parse("android.resource://nl.frankkie.hwcon2016/raw/yay"));
+        builder.setSound(Uri.parse("android.resource://nl.frankkie.mwbfkc2016/raw/yay"));
         builder.setSmallIcon(R.drawable.ic_stat_notification_heart);
         Intent i = new Intent(context, EventListActivity.class);
         PendingIntent pi = PendingIntent.getActivity(context, 0, i, 0);

@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 import com.koushikdutta.ion.Ion;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.fragments.QrListFragment;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.fragments.QrListFragment;
 
 /**
  * Created by fbouwens on 23-01-15.

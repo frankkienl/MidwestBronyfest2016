@@ -17,7 +17,7 @@ public class EventProvider extends ContentProvider {
 
     /*
      * Event
-     * content://nl.frankkie.hwcon2016/
+     * content://nl.frankkie.mwbfkc2016/
      * event
      * event/speakers
      * speakers
@@ -25,43 +25,43 @@ public class EventProvider extends ContentProvider {
      * favorites
      * qr
      */
-    //content://nl.frankkie.hwcon2016/event/ (LIST)
+    //content://nl.frankkie.mwbfkc2016/event/ (LIST)
     public static final int EVENT = 100;
-    //content://nl.frankkie.hwcon2016/event/ID (ITEM)
+    //content://nl.frankkie.mwbfkc2016/event/ID (ITEM)
     public static final int EVENT_ID = 101;
-    //content://nl.frankkie.hwcon2016/speaker/ (LIST)
+    //content://nl.frankkie.mwbfkc2016/speaker/ (LIST)
     public static final int SPEAKER = 200;
-    //content://nl.frankkie.hwcon2016/speaker/ (ITEM)
+    //content://nl.frankkie.mwbfkc2016/speaker/ (ITEM)
     public static final int SPEAKER_ID = 201;
-    //content://nl.frankkie.hwcon2016/location/ (LIST)
+    //content://nl.frankkie.mwbfkc2016/location/ (LIST)
     public static final int LOCATION = 300;
-    //content://nl.frankkie.hwcon2016/location/ID (ITEM)
+    //content://nl.frankkie.mwbfkc2016/location/ID (ITEM)
     public static final int LOCATION_ID = 301;
-    //content://nl.frankkie.hwcon2016/speakers_in_events/ (LIST)
+    //content://nl.frankkie.mwbfkc2016/speakers_in_events/ (LIST)
     public static final int SPEAKERS_IN_EVENTS = 400;
-    //content://nl.frankkie.hwcon2016/speakers_in_events/ID (ITEM)
+    //content://nl.frankkie.mwbfkc2016/speakers_in_events/ID (ITEM)
     public static final int SPEAKERS_IN_EVENTS_ID = 401;
-    //content://nl.frankkie.hwcon2016/speakers_in_events/event/ID (LIST of Speakers in Event)
+    //content://nl.frankkie.mwbfkc2016/speakers_in_events/event/ID (LIST of Speakers in Event)
     public static final int SPEAKERS_IN_EVENTS_EVENT_ID = 402;
-    //content://nl.frankkie.hwcon2016/favorites/ (LIST of favorites of all types)
+    //content://nl.frankkie.mwbfkc2016/favorites/ (LIST of favorites of all types)
     public static final int FAVORITES = 500;
-    //content://nl.frankkie.hwcon2016/favorites/event (LIST of favorites of event type)
+    //content://nl.frankkie.mwbfkc2016/favorites/event (LIST of favorites of event type)
     public static final int FAVORITES_EVENTS = 501;
-    //content://nl.frankkie.hwcon2016/qr/ (LIST of QR codes to be found)
+    //content://nl.frankkie.mwbfkc2016/qr/ (LIST of QR codes to be found)
     public static final int QR = 600;
-    //content://nl.frankkie.hwcon2016/qr/ID (ITEM)
+    //content://nl.frankkie.mwbfkc2016/qr/ID (ITEM)
     public static final int QR_ID = 601;
-    //content://nl.frankkie.hwcon2016/qr/hash/ID (ITEM)
+    //content://nl.frankkie.mwbfkc2016/qr/hash/ID (ITEM)
     public static final int QR_HASH = 602;
-    //content://nl.frankkie.hwcon2016/qrfound/ (LIST of found codes, with times, without names and description)
+    //content://nl.frankkie.mwbfkc2016/qrfound/ (LIST of found codes, with times, without names and description)
     public static final int QR_FOUND = 700;
-    //content://nl.frankkie.hwcon2016/qrfound/ID (ITEM, note: is found-id, not qr-id)
+    //content://nl.frankkie.mwbfkc2016/qrfound/ID (ITEM, note: is found-id, not qr-id)
     public static final int QR_FOUND_ID = 701;
-    //content://nl.frankkie.hwcon2016/qrfound/qr/ID (ITEM, using QR-id)
+    //content://nl.frankkie.mwbfkc2016/qrfound/qr/ID (ITEM, using QR-id)
     public static final int QR_FOUND_QR_ID = 702;
-    //content://nl.frankkie.hwcon2016/news/ (LIST of newsitems)
+    //content://nl.frankkie.mwbfkc2016/news/ (LIST of newsitems)
     public static final int NEWS = 800;
-    //content://nl.frankkie.hwcon2016/news/ID (newsitem)
+    //content://nl.frankkie.mwbfkc2016/news/ID (newsitem)
     public static final int NEWS_ID = 801;
 
     private static final UriMatcher sUriMatcher = buildUriMatcher();
@@ -184,7 +184,7 @@ public class EventProvider extends ContentProvider {
                 //SELECT event.title, location.name FROM event JOIN location ON event.location_id = location._id WHERE event._id = ?
                 if (selection == null || "".equals(selection)) {
                     selection = EventContract.EventEntry.TABLE_NAME + "." + EventContract.EventEntry._ID + " = ?";
-                    //content://nl.frankkie.hwcon2016/event/0 <-- last segment is ID.
+                    //content://nl.frankkie.mwbfkc2016/event/0 <-- last segment is ID.
                     selectionArgs = new String[]{uri.getLastPathSegment()};
                 }
                 retCursor = mOpenHelper.getReadableDatabase().query(
@@ -280,7 +280,7 @@ public class EventProvider extends ContentProvider {
                 //all speakers of 1 event (from id)
                 if (selection == null || "".equals(selection)) {
                     selection = EventContract.SpeakersInEventsEntry.TABLE_NAME + "." + EventContract.SpeakersInEventsEntry.COLUMN_NAME_EVENT_ID + " = ?";
-                    //content://nl.frankkie.hwcon2016/speakers_in_events/event/0 <-- last segment is ID.
+                    //content://nl.frankkie.mwbfkc2016/speakers_in_events/event/0 <-- last segment is ID.
                     selectionArgs = new String[]{uri.getLastPathSegment()};
                 }
                 retCursor = mOpenHelper.getReadableDatabase().query(

@@ -30,12 +30,12 @@ import com.google.zxing.integration.android.IntentResult;
 
 import org.acra.ACRA;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.adapters.QrListAdapter;
-import nl.frankkie.hwcon2016.data.EventContract;
-import nl.frankkie.hwcon2016.util.GcmUtil;
-import nl.frankkie.hwcon2016.util.GoogleApiUtil;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.adapters.QrListAdapter;
+import nl.frankkie.mwbfkc2016.data.EventContract;
+import nl.frankkie.mwbfkc2016.util.GcmUtil;
+import nl.frankkie.mwbfkc2016.util.GoogleApiUtil;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * Created by fbouwens on 23-01-15.
@@ -86,7 +86,7 @@ public class QrListFragment extends ListFragment implements LoaderManager.Loader
 
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-        Uri uri = Uri.parse("content://nl.frankkie.hwcon2016/qr/"); //list of all QR codes to be found
+        Uri uri = Uri.parse("content://nl.frankkie.mwbfkc2016/qr/"); //list of all QR codes to be found
         CursorLoader cl = new CursorLoader(getActivity(), uri, QRLIST_COLUMNS, null, null, null);
         return cl;
     }
@@ -194,7 +194,7 @@ public class QrListFragment extends ListFragment implements LoaderManager.Loader
             }
             //Check 1
             //Does it have the with HWcon uri-scheme
-            if (!qrdata.startsWith("https://wofje.8s.nl/hwcon2016/webapp/qrhunt.php?qr=")){
+            if (!qrdata.startsWith("https://wofje.8s.nl/mwbfkc2016/webapp/qrhunt.php?qr=")){
                 Log.e("HWcon","QR code does not start with the correct URI-scheme");
                 //Not a QR hunt code, but some other code
                 handler.post(new Runnable() {

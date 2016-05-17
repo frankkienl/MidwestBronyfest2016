@@ -26,8 +26,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * Created by FrankkieNL on 13-1-2015.

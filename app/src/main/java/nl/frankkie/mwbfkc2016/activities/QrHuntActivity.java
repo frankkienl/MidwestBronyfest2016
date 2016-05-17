@@ -22,9 +22,9 @@ import com.google.android.gms.plus.Plus;
 
 import org.acra.ACRA;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.util.GoogleApiUtil;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.util.GoogleApiUtil;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * Created by FrankkieNL on 18-1-2015.

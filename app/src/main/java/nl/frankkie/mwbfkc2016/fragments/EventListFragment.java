@@ -11,16 +11,17 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.adapters.EventAdapter;
-import nl.frankkie.hwcon2016.data.EventContract;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.adapters.EventAdapter;
+import nl.frankkie.mwbfkc2016.data.EventContract;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * A list fragment representing a list of Events. This fragment
@@ -122,6 +123,8 @@ public class EventListFragment extends Fragment implements LoaderManager.LoaderC
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Log.v("Convention", "EventListFragment.onCreate");
     }
 
     @Override
@@ -185,17 +188,6 @@ public class EventListFragment extends Fragment implements LoaderManager.LoaderC
         public void onItemSelected(String id, String shareTitle) {
         }
     };
-
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-    }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {

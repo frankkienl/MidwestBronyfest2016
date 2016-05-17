@@ -24,9 +24,9 @@ import com.google.android.gms.plus.Plus;
 
 import org.acra.ACRA;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.fragments.AppIconDialogFragment;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.fragments.AppIconDialogFragment;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 
 public class AboutActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {

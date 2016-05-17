@@ -13,7 +13,7 @@ import com.google.android.gms.plus.Plus;
 
 import org.acra.ACRA;
 
-import nl.frankkie.hwcon2016.R;
+import nl.frankkie.mwbfkc2016.R;
 
 /**
  * Created by FrankkieNL on 14-1-2015.

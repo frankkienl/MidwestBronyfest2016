@@ -10,7 +10,7 @@ import android.provider.BaseColumns;
 public class EventContract {
 
     //Used for ContentProvider
-    public static final String CONTENT_AUTHORITY = "nl.frankkie.hwcon2016";
+    public static final String CONTENT_AUTHORITY = "nl.frankkie.mwbfkc2016";
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
     public static final String PATH_EVENT = "event";
     public static final String PATH_SPEAKER = "speaker";
@@ -169,7 +169,7 @@ public class EventContract {
         }
 
         public static Uri buildQrByHashUri(String hash) {
-            //content://nl.frankkie.hwcon2016/qr/hash/<HASH>
+            //content://nl.frankkie.mwbfkc2016/qr/hash/<HASH>
             return CONTENT_URI.buildUpon().appendPath("hash").appendPath(hash).build();
         }
     }

@@ -19,7 +19,7 @@ import java.net.URL;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-import nl.frankkie.hwcon2016.R;
+import nl.frankkie.mwbfkc2016.R;
 
 /**
  * Created by FrankkieNL on 2/14/2016.
@@ -115,8 +115,8 @@ public class MapDownloadIntentService extends IntentService {
 
         //send local broadcast
         LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(this);
-        Intent i = new Intent("hwcon2016_map");
-        //i.setData(Uri.parse("hwcon2016://map/"));
+        Intent i = new Intent("mwbfkc2016_map");
+        //i.setData(Uri.parse("mwbfkc2016://map/"));
         //i.putExtra("action", "mapDownloaded");
         localBroadcastManager.sendBroadcast(i);
     }

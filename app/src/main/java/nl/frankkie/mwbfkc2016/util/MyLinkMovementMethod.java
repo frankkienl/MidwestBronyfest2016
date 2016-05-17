@@ -17,7 +17,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
-import nl.frankkie.hwcon2016.R;
+import nl.frankkie.mwbfkc2016.R;
 
 /**
  * Created by FrankkieNL on 2/21/2016.

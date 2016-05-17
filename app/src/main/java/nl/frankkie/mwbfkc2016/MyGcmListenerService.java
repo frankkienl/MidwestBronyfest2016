@@ -5,7 +5,7 @@ import android.util.Log;
 
 import com.google.android.gms.gcm.GcmListenerService;
 
-import nl.frankkie.hwcon2016.util.GcmUtil;
+import nl.frankkie.mwbfkc2016.util.GcmUtil;
 
 /**
  * Created by FrankkieNL on 1/10/2016.

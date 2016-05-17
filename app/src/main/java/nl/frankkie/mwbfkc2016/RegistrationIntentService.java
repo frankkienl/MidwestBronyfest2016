@@ -11,8 +11,8 @@ import com.google.android.gms.iid.InstanceID;
 
 import java.io.IOException;
 
-import nl.frankkie.hwcon2016.util.GcmUtil;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.util.GcmUtil;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * Created by FrankkieNL on 1/10/2016.

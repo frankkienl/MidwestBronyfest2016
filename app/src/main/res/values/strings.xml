@@ -18,7 +18,7 @@
     <string name="action_star_add">Add to favorites</string>
     <string name="action_star_remove">Remove from favorites</string>
 
-    <string name="share_text">I\'ll go to the event \'%s\' during HWcon 2016! #hwcon2016</string>
+    <string name="share_text">I\'ll go to the event \'%s\' during mwbfkc 2016! #mwbfkc2016</string>
 
     <string name="about_mail_header">Mail</string>
     <string name="about_date_header">Date</string>
@@ -36,11 +36,11 @@
         Specific for this convention
         Change these when using for another convention
     -->
-    <string name="app_name">HWcon 2016</string>
-    <string name="about_description">A My little Pony Convention in the Netherlands for all generations!</string>
-    <string name="about_location_details">Event Center Fokker, IJweg 1094, 2133 MN Hoofddorp, The Netherlands</string>
-    <string name="about_mail_details">info@hwcon.nl</string>
-    <string name="about_website_details">www.hwcon.nl</string>
+    <string name="app_name">Midwest Bronyfest 2016</string>
+    <string name="about_description">A My little Pony Convention in Kansas City!</string>
+    <string name="about_location_details">Kansas City, United States</string>
+    <string name="about_mail_details">https://twitter.com/mwbfkc</string>
+    <string name="about_website_details">https://mwbfkc.net/about</string>
     <string name="about_date_details">February 27-28, 2016</string>
 
     <string name="map_floor0">Ground floor</string>
@@ -48,8 +48,8 @@
     <string name="map_floor2">Attic</string>
 
     <!-- Don't translate these // -->
-    <string name="syncadapter_domain" translatable="false">nl.frankkie.hwcon2016</string>
-    <string name="syncadapter_authority" translatable="false">nl.frankkie.hwcon2016</string>
+    <string name="syncadapter_domain" translatable="false">nl.frankkie.mwbfkc2016</string>
+    <string name="syncadapter_authority" translatable="false">nl.frankkie.mwbfkc2016</string>
     <string name="placeholder_short" translatable="false">Lorem ipsum</string>
     <string name="placeholder_long" translatable="false">Lorem ipsum dolor sit amet.</string>
     <string name="placeholder_very_long" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent viverra aliquam neque id ultrices. Nullam lobortis orci eu varius tincidunt. In convallis lorem diam. Maecenas auctor sagittis porttitor. Curabitur dapibus neque odio, in finibus orci rutrum non. Nullam dapibus elit id magna porta, id condimentum purus pretium. Aenean non erat rutrum, finibus dui ut, ornare odio. Aliquam mollis pretium neque, at consequat ligula posuere vitae. Vestibulum sed venenatis felis. Nullam lorem lorem, bibendum vitae urna nec, viverra consequat erat.</string>
@@ -64,7 +64,7 @@
     <string name="title_section_login">Login/Logout</string>
     <!-- Google Play Games //-->
     <!-- 935982150118-6d23ufpeth053935sniv19f82t1ab407.apps.googleusercontent.com //-->
-    <string name="google_play_games_app_id" translatable="false">935982150118</string>
+    <string name="google_play_games_app_id" translatable="false">299441933179</string>
     <string name="achievement_ready_to_go" translatable="false">CgkI5uOI554bEAIQAQ</string>
     <string name="achievement_personal_schedule" translatable="false">CgkI5uOI554bEAIQAg</string>
     <string name="achievement_its_a_start" translatable="false">CgkI5uOI554bEAIQAw</string>

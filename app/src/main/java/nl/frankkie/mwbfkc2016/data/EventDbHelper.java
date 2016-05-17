@@ -4,11 +4,11 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import nl.frankkie.hwcon2016.data.EventContract.EventEntry;
-import nl.frankkie.hwcon2016.data.EventContract.FavoritesEntry;
-import nl.frankkie.hwcon2016.data.EventContract.LocationEntry;
-import nl.frankkie.hwcon2016.data.EventContract.SpeakerEntry;
-import nl.frankkie.hwcon2016.data.EventContract.SpeakersInEventsEntry;
+import nl.frankkie.mwbfkc2016.data.EventContract.EventEntry;
+import nl.frankkie.mwbfkc2016.data.EventContract.FavoritesEntry;
+import nl.frankkie.mwbfkc2016.data.EventContract.LocationEntry;
+import nl.frankkie.mwbfkc2016.data.EventContract.SpeakerEntry;
+import nl.frankkie.mwbfkc2016.data.EventContract.SpeakersInEventsEntry;
 
 /**
  * Created by fbouwens on 19-11-14.

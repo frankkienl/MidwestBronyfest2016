@@ -35,10 +35,10 @@ import com.google.android.gms.plus.model.people.Person;
 
 import org.acra.ACRA;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.util.GcmUtil;
-import nl.frankkie.hwcon2016.util.GoogleApiUtil;
-import nl.frankkie.hwcon2016.util.Util;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.util.GcmUtil;
+import nl.frankkie.mwbfkc2016.util.GoogleApiUtil;
+import nl.frankkie.mwbfkc2016.util.Util;
 
 /**
  * Created by FrankkieNL on 18-1-2015.
@@ -397,7 +397,7 @@ public class LoginActivity extends AppCompatActivity implements
 
         @Override
         protected Void doInBackground(Void... params) {
-            String url = "https://wofje.8s.nl/hwcon2016/api/v1/changenickname.php?useremail=" + email + "&regId=" + regId + "&nickname=" + nickname;
+            String url = "https://wofje.8s.nl/mwbfkc2016/api/v1/changenickname.php?useremail=" + email + "&regId=" + regId + "&nickname=" + nickname;
             url = url.replace(" ", "+");
             try {
                 Util.httpDownload(url);
@@ -433,7 +433,7 @@ public class LoginActivity extends AppCompatActivity implements
         @Override
         protected String doInBackground(Void... params) {
             String response = null;
-            String url = "https://wofje.8s.nl/hwcon2016/api/v1/applogin.php?useremail=" + email + "&regId=" + regId + "&gplusname=" + user.getDisplayName();
+            String url = "https://wofje.8s.nl/mwbfkc2016/api/v1/applogin.php?useremail=" + email + "&regId=" + regId + "&gplusname=" + user.getDisplayName();
             url = url.replace(" ", "+");
             try {
                 response = Util.httpDownload(url);

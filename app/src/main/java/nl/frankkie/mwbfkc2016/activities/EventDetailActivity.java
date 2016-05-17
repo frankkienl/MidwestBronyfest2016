@@ -14,9 +14,9 @@ import com.google.android.gms.plus.Plus;
 
 import org.acra.ACRA;
 
-import nl.frankkie.hwcon2016.R;
-import nl.frankkie.hwcon2016.fragments.EventDetailFragment;
-import nl.frankkie.hwcon2016.util.GoogleApiUtil;
+import nl.frankkie.mwbfkc2016.R;
+import nl.frankkie.mwbfkc2016.fragments.EventDetailFragment;
+import nl.frankkie.mwbfkc2016.util.GoogleApiUtil;
 
 
 /**
