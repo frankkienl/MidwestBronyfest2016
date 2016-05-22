@@ -4,6 +4,8 @@ import android.app.Application;
 import android.util.Log;
 
 import org.acra.ACRA;
+import org.acra.config.ACRAConfiguration;
+import org.acra.config.ConfigurationBuilder;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -17,6 +19,7 @@ public class SecretAcraKey {
 
     /**
      * This is made, so I don't have to share the secret password on Github.
+     *
      * @param app
      */
     public static void providePassword(Application app) {
@@ -39,13 +42,18 @@ public class SecretAcraKey {
             String formUriBasicAuthLogin = jSONObject.getString("formUriBasicAuthLogin");
             String formUriBasicAuthPassword = jSONObject.getString("formUriBasicAuthPassword");
 
-            ACRA.getConfig().setFormUri(formUri);
-            ACRA.getConfig().setFormUriBasicAuthLogin(formUriBasicAuthLogin);
-            ACRA.getConfig().setFormUriBasicAuthPassword(formUriBasicAuthPassword);
+//            ACRA.getConfig().setFormUri(formUri);
+//            ACRA.getConfig().setFormUriBasicAuthLogin(formUriBasicAuthLogin);
+//            ACRA.getConfig().setFormUriBasicAuthPassword(formUriBasicAuthPassword);
+            ConfigurationBuilder a = new ConfigurationBuilder(app);
+            a.setFormUri(formUri);
+            a.setFormUriBasicAuthLogin(formUriBasicAuthLogin);
+            a.setFormUriBasicAuthPassword(formUriBasicAuthPassword);
+            ACRA.init(app, a.build());
         } catch (Exception ex) {
             //Apparantly something went wrong, so no Crash Reporting.
             //Kinda ironic..
-            Log.e(app.getString(R.string.app_name),"Could not start ACRA Crash Reporting");
+            Log.e(app.getString(R.string.app_name), "Could not start ACRA Crash Reporting");
             ex.printStackTrace();
         }
     }
