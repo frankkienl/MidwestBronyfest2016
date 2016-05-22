@@ -202,7 +202,8 @@ public class AboutActivity extends AppCompatActivity implements GoogleApiClient.
         //i.setData(Uri.parse("https://www.google.nl/maps?t=m&z=15&cid=11779929733433826402"));
         //i.setData(Uri.parse("geo:52.3118607,4.6636143"));
         //i.setData(Uri.parse("geo:0,0?q=52.3118607,4.6636143(Venue)"));
-        i.setData(Uri.parse("geo:0,0?q=IJweg%201094%202133%20MH%20Hoofddorp"));
+        //i.setData(Uri.parse("geo:0,0?q=IJweg%201094%202133%20MH%20Hoofddorp"));
+        i.setData(Uri.parse("geo:0,0?q=11730%20NW%20Ambassador%20Dr,Kansas%20City,%20MO%2064153"));
         try {
             startActivity(i);
         } catch (ActivityNotFoundException anfe) {

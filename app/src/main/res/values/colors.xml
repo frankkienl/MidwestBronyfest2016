@@ -5,4 +5,7 @@
     <color name="gridview_clicked">#AAA</color>
     <color name="gridview_active">#AAF</color>
     <color name="gridview_normal">#DDD</color>
+    <color name="splash_background1">#e3b768</color>
+    <color name="splash_background2">#ebcc93</color>
+    <color name="splash_background3">#e3cc68</color>
 </resources>

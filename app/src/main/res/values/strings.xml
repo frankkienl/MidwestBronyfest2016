@@ -38,10 +38,10 @@
     -->
     <string name="app_name">Midwest Bronyfest 2016</string>
     <string name="about_description">A My little Pony Convention in Kansas City!</string>
-    <string name="about_location_details">Kansas City, United States</string>
-    <string name="about_mail_details">https://twitter.com/mwbfkc</string>
+    <string name="about_location_details">KCI Expo Center\n11730 NW Ambassador Dr, Kansas City,\nMO 64153,  United States</string>
+    <string name="about_mail_details">nfo@mwbfkc.net</string>
     <string name="about_website_details">https://mwbfkc.net/about</string>
-    <string name="about_date_details">February 27-28, 2016</string>
+    <string name="about_date_details">February 26-27-28, 2016</string>
 
     <string name="map_floor0">Ground floor</string>
     <string name="map_floor1">2nd floor</string>
@@ -106,7 +106,7 @@
     <string name="aboutapp_viewlicences">View Licences</string>
     <string name="not_logged_in">not logged in</string>
     <string name="current_lang">EN</string>
-    <string name="about_convention_title">Hearth\'s Warming Con</string>
+    <string name="about_convention_title">Midwest Bronyfest 2016</string>
     <string name="another_easteregg_found">Found another easter egg :D</string>
 
 </resources>
