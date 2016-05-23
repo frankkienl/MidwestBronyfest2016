@@ -58,8 +58,9 @@ import nl.frankkie.mwbfkc2016.fragments.AppIconDialogFragment;
 public class Util {
     public static final int navigationDrawerIntentFlags = Intent.FLAG_ACTIVITY_CLEAR_TOP;
 
-    public static final String DATE_FORMAT = "E, HH:mm"; //example: Sunday, 16:30
-    public static SimpleDateFormat displayDateFormat = new SimpleDateFormat(DATE_FORMAT);
+    public static final String DATE_FORMAT_24h = "E, HH:mm"; //example: Sunday, 16:30
+    public static final String DATE_FORMAT_12h = "E, KK:mm a"; //example: Sunday, 16:30
+    public static SimpleDateFormat displayDateFormat = new SimpleDateFormat(DATE_FORMAT_12h);
     public static SimpleDateFormat mysqlDateFormat = new SimpleDateFormat("yyyy-MM-dd kk:mm:ss");
 
     public static Map<String, Class<? extends Activity>> sectionsToClass = new HashMap<String, Class<? extends Activity>>();
