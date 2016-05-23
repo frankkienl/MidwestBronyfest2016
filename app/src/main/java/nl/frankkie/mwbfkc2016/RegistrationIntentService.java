@@ -37,6 +37,7 @@ public class RegistrationIntentService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
+        Log.v("Convention","RegistrationIntentService");
         InstanceID instanceID = InstanceID.getInstance(this);
         try {
             String token = instanceID.getToken(getString(R.string.gcm_defaultSenderId),

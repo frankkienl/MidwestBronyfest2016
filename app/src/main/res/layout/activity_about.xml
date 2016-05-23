@@ -58,8 +58,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:adjustViewBounds="true"
-                            android:paddingTop="16dp"
-                            android:src="@drawable/hwcon2016_banner" />
+                            android:src="@drawable/mwbfkc2016_banner" />
 
                         <TextView
                             style="@style/textStyle_details"

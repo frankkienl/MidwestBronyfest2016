@@ -43,12 +43,12 @@ public class QrListAdapter extends CursorAdapter {
             Ion.with(context)
                     .load(imageStr)
                     .withBitmap()
-                    .error(R.drawable.ic_launcher_hwcon2015_2)
-                    .placeholder(R.drawable.ic_launcher_hwcon2015_2)
+                    .error(R.mipmap.ic_launcher)
+                    .placeholder(R.mipmap.ic_launcher)
                     .intoImageView(viewHolder.mImage);
         } else {            
             //Not found, and not allowed to show image, dont show.
-            viewHolder.mImage.setImageResource(R.drawable.ic_launcher_hwcon2015_2_gray);
+            viewHolder.mImage.setImageResource(R.mipmap.ic_launcher);
         }
 
         viewHolder.mName.setText(name);

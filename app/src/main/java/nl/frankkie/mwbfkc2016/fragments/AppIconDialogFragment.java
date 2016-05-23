@@ -25,8 +25,8 @@ import nl.frankkie.mwbfkc2016.util.Util;
  */
 public class AppIconDialogFragment extends DialogFragment {
 
-    public static final int[] ICONS = {R.drawable.ic_launcher_hwcon2016_1_web, R.drawable.ic_launcher_hwcon2016_2_web, R.drawable.ic_launcher_hwcon2016_3_web, R.drawable.ic_launcher_hwcon2016_4_web};
-    public static final int[] ICONS_mipmap = {R.mipmap.ic_launcher_hwcon2016_1, R.mipmap.ic_launcher_hwcon2016_2, R.mipmap.ic_launcher_hwcon2016_3, R.mipmap.ic_launcher_hwcon2016_4};
+    public static final int[] ICONS = {R.drawable.ic_launcher_mwbfkc2016_web};
+    public static final int[] ICONS_mipmap = {R.mipmap.ic_launcher};
 
     public AppIconDialogFragment() {
     }

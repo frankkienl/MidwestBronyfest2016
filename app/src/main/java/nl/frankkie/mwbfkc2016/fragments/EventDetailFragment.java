@@ -167,15 +167,15 @@ public class EventDetailFragment extends Fragment implements LoaderManager.Loade
                 String descriptionString = data.getString(2);
                 //descriptionString = descriptionString.replace("\\n","\n");
                 sDescription.setText(Html.fromHtml(descriptionString));
-                String sImageUrl = data.getString(4);
+                String sImageUrl = data.getString(3);
                 mSpeakersContainer.addView(speakerItem);
 
                 //Load image
                 Ion.with(this)
                         .load(sImageUrl)
                         .withBitmap()
-                        .error(R.drawable.ic_launcher_hwcon2016_4_web)
-                        .placeholder(R.drawable.ic_launcher_hwcon2016_4_web)
+                        .error(R.drawable.ic_launcher_mwbfkc2016_web)
+                        .placeholder(R.drawable.ic_launcher_mwbfkc2016_web)
                         .intoImageView(sImageView);
             }
         }

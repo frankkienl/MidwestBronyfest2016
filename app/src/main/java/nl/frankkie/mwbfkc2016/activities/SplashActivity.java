@@ -236,6 +236,7 @@ public class SplashActivity extends AppCompatActivity implements GoogleApiClient
             }
         } else {
             //GCM is available!!
+            Log.v("Convention","Time to ask for GCM regId");
             Intent i = new Intent(this, RegistrationIntentService.class);
             startService(i);
         }
